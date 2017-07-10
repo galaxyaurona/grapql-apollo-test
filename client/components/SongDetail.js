@@ -18,14 +18,12 @@ class SongDetail extends Component {
                 songId: this.props.params.id
             }
         })
-        mutation.then( ()=> {
-            this.props.data.refetch()
-        }) 
+
         return mutation
 
     }
     render () {
-   
+        console.log("song", this.props.data);
         const {song} = this.props.data;
         let content = "";
         if (!song)  

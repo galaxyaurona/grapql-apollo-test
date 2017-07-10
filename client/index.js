@@ -7,8 +7,9 @@ import SongList from "./components/SongList"
 import SongCreate from "./components/SongCreate"
 import SongDetail from "./components/SongDetail"
 import App from "./components/App"
+import "./style/style.css"
 const client = new ApolloClient({
-
+  dataIdFromObject: o => o.id
 })
 
 const Root = () => {
